@@ -10,8 +10,11 @@ import math
 from pathlib import Path
 import gc
 import sys
+import pandas as pd
 
+df = pd.DataFrame({'c1': [10, 11, 12], 'c2': [100, 110, 120]})
+ # make sure indexes pair with number of rows
 
-a=np.array([[1,2,3],[4,5,6],[3,2,3]])
-u,v=np.linalg.eig(a)
-print(a[:,1])
+for index, row in df.iterrows():
+    print(row[1])
+
